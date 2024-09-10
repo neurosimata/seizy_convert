@@ -9,6 +9,7 @@ in 5 second windows and will be converted to HDF5 files (.h5) in the following f
 
 - Currently supports the conversion of continuous EDF files containing 1 animal per recording.
 
+----------
 ### :snake: Dependencies
 
     pip install numpy, scipy, tables, pyedflib, tqdm
@@ -18,7 +19,7 @@ in 5 second windows and will be converted to HDF5 files (.h5) in the following f
 - [pytables](https://www.pytables.org/)
 - [pyedflib](https://pyedflib.readthedocs.io/en/latest/)
 - [tqdm](https://github.com/tqdm/tqdm)
-
+----------
 ### Configuration settings
 The `config.json` file contains the parameters. Usually only the `selected_channels` field needs to be edited by user.
 
@@ -27,7 +28,7 @@ The `config.json` file contains the parameters. Usually only the `selected_chann
     - scale : signal scaling factor, Default = 1
     - selected_channels: Name of channels to be selected.
     - selected_channel_idx: Index of channels to be selected. Default is None. Overwrites selected_channels.
-
+----------
 ### How to use
 
 #### One Animal per File - Select by Channel name
@@ -45,6 +46,7 @@ If for some reason channel names can not be edited to be consistent across chann
 
 If all tests pass and conversion completes successfully an equivalent .h5 file will be created for each .edf file in the folder
 
+----------
 ### Examples
 There are example .edf files in the `\example_data` subfolder that we can use to try the app.
 1) For example there is a 2 channel file in `\example_data\edf_2channels` with channel names `Channel_1` and `Channel_2`.
@@ -56,11 +58,13 @@ There are example .edf files in the `\example_data` subfolder that we can use to
 
 When prompted for the file path copy and paste the path of the converted .h5 file, which will print the data shape and plot the first segment of each channel.
 
+----------
 ### Updates
 Depending on demand new features will be added such as:
 1) Multiple Animals per EDF file.
 2) Addition of other file format.
 
+----------
 ### Contributions
 We welcome all project contributions including raising issues and pull requests!
 
